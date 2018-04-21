@@ -18,7 +18,7 @@ Re-generate `npm-shrinkwrap.json`.
 ```bash
 rm -rf npm-shrinkwrap.json node_modules
 npm install
-npm shrinkwrap
+npm shrinkwrap --dev
 ```
 
 Stage modified meta files.
