@@ -1,7 +1,7 @@
 {
   "name": "@shimataro/npm-package-template",
   "description": "template for NPM package",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "shimataro",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
   "keywords": [
     "template",
     "npm",
-	"package"
+    "package"
   ],
   "main": "./dist/index.js",
   "engines": {
@@ -28,9 +28,11 @@
     "watch-gulpfile": "gulp watch-gulpfile",
     "watch-js": "gulp watch-js",
     "postinstall": "npm run build",
-    "check-updates": "ncu"
+    "check-updates": "ncu",
+    "test": "NODE_PATH=./src jest"
   },
   "devDependencies": {
+    "jest": "^22.4.3",
     "npm-check-updates": "^2.13.0"
   },
   "dependencies": {
@@ -38,5 +40,16 @@
     "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0"
+  },
+  "jest": {
+    "verbose": false,
+    "moduleFileExtensions": [
+      "es",
+      "js"
+    ],
+    "testRegex": "\\.(test|spec)\\.es$",
+    "transform": {
+      "\\.es$": "babel-jest"
+    }
   }
 }
